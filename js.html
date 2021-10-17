@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.main{color: red;font-weight: bold}
+		</style>
+		<script>
+			/*
+			window.onload = function() 
+			{
+				document.body.innerHTML = "\
+				<input type='button' value='按钮' />\
+				<input type='button' value='按钮'/>\
+				<input type='button' value='按钮' />";
+			//	var oBtn = document.getElementsByTagName("input");				
+				document.querySelectorAll("input")[1].onclick = function()
+				{
+					alert("表单元素菜单");
+				};				
+			}
+			*/
+			window.onload = function () 
+			{
+				var oDiv = document.getElementById("content");
+				var oStrong = document.createElement("strong");
+				var oTxt = document.createTextNode("this is create node testing");
+				var oInput = document.createElement("input");
+				oInput.id = "submit";
+				oInput.type = "button";
+				oInput.value = "提交";
+				oStrong.appendChild(oTxt);
+				oDiv.appendChild(oStrong);
+				oDiv.appendChild(oInput);
+				
+				var oTable = document.createElement("table");
+				for (var i = 0; i < 3; i++)
+				{
+					var oTr = document.createElement("tr");
+					for (var j = 0; j < 3; j++)
+					{
+						var oTd = document.createElement("td");
+						oTr.appendChild(oTd);
+					}
+					oTable.appendChild(oTr);
+				}
+				oDiv.appendChild(oTable);
+				
+				var oBtn = document.getElementById("btn");
+				var oBtn_add = document.getElementById("btn_add");
+				var oBtn_remove = document.getElementById("btn_remove");
+				var oP = document.getElementsByTagName("p");
+				oBtn_add.onclick = function()
+				{
+					oP[0].className = "main";
+				//	alert(getComputedStyle(oP[0]).Color);
+					oP[0].style.color = "red";
+					
+					
+				}
+				oBtn_remove.onclick = function()
+				{
+				//	oP[0].className = "";
+					oP[0].style.color = "hotpink";
+				}
+				
+				oBtn.addEventListener("click", function(){
+					alert("first");
+				}, false);
+				oBtn.addEventListener("click", function(){
+					alert("second");
+				}, false);
+				oBtn.addEventListener("click", function(){
+					alert("third");
+				}, false);			
+				
+				function alertMes()
+				{
+					/*
+					var oUl = document.getElementById("list");
+					var oTxt = document.getElementById("txt");
+					var textNode = document.createTextNode(oTxt.value);
+					var oLi = document.createElement("li");
+					oLi.appendChild(textNode);
+					oUl.insertBefore(oLi, oUl.firstElementChild);
+					*/
+				   var str = "";
+				   var iCheckbox = document.getElementsByName("fruit");
+				   for(var i = 0; i < iCheckbox.length; i++)
+				   {
+					   if (iCheckbox[i].checked)
+					   {
+						   str += iCheckbox[i].value;
+						   str += "; ";
+					   }
+				   }
+				   oBtn.value = "kill u";
+				   alert(str);
+				   
+				}
+				
+				var oEvent = document.getElementById("eventest");
+				var oTxt = document.getElementById("txt")
+				 oEvent.onmouseover = function()
+				 {
+					 this.style.color = "red";
+				 };
+				 
+				 oEvent.onmouseout = function()
+				 {
+					 this.style.color = "green";
+				 };
+				 
+				 oTxt.onclick = function()
+				 {
+					 this.select();
+				 };
+				 
+				 oTxt.onselect = function()
+				 {
+					 alert("select event testing");
+				 };
+				 
+				 document.body.oncopy = function()
+				 {
+					 
+					 alert("copy can't running");
+					 return false;
+				 };
+				 
+				 document.body.onselectstart = function()
+				 {
+					 //alert("html content can't select");
+					 return false;
+				 };
+				 
+				 document.oncontextmenu = function()
+				 {
+					 return false;
+				 };
+			}
+			
+			window.onbeforeunload = function(e)
+			{
+				e.returnValue="welcome come here again";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="content"></div>
+		<ul id="list">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ul>
+		<input id="txt" type="text" value="this test text"/>
+		<input id="btn" type="button" value="测试" />
+		<div>
+			<label><input type="checkbox" name="fruit" value="apple" />平果</label>
+			<label><input type="checkbox" name="fruit" value="banana" />香蕉</label>
+			<label><input type="checkbox" name="fruit" value="watermelon" />西瓜</label>
+		</div>
+		<p>仅仅用于测试，看看样式的效果添加和删除</p>
+		<input id="btn_add" type="button" value="添加样式" />
+		<input id="btn_remove" type="button" value="删除样式" />
+		<p id="eventest">学习网</p>
+	</body>
+</html>

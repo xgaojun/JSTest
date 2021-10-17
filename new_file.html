@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="study html" />
+		<meta name="description" content="comments" />
+		<title>jun testing</title>
+		<style type="text/css">
+		table,tr,td,th{border: 1px solid black;color: aqua;}
+		.lvy{color: green;
+		}		
+		#formname{color: aqua; font-size: 10px;}
+		#first
+		{
+			background-color: #B7F1FF;
+			width: 120px;
+			height: 180px;
+			border: 1px solid gray;
+			line-height: 600px;
+			
+						
+		}
+		#second
+		{
+			background-color: hotpink;
+			position: relative;
+			top: 10px;
+			left: 160px;
+			border: 1px solid silver;
+
+		}
+		</style>
+		<script>
+		/*
+			window.onload = function() {
+					alert("welcome")
+			}
+		*/
+		</script>
+	</head>
+	<body>
+		<div id="first">无固定的div元素</div>
+		<div id="second">固定定位的div元素</div>
+		<div>
+			<form id="formname">
+				<input type="text" value="这是单行文本" size="40"/><br />
+				<input type="password" value="passwd" /><br />
+				<input type="button" value="submit" onclick="alert('big pig')" /><br />
+				<input type="radio" name="radiogroup" value="man" />
+				<input type="radio" name="radiogroup" value="woman" checked/>
+				<input type="checkbox" name="checkboxtest" value="男" checked/>
+				<input type="checkbox" name="checkboxtest" value="女" checked/>
+				<input type="checkbox" name="checkboxtest" value="妖" />
+				<input type="checkbox" name="checkboxtest" value="神" />
+				<input type="file" value="submit" /><br />
+				<input type="reset" value="clear" />
+				<textarea rows="10" cols="60">这是多行文本</textarea><br />
+				<select>
+					<option>html</option>
+					<option>css</option>
+					<option>java</option>
+				</select>
+				<br />
+			</form>
+		</div>
+		<br />
+		<iframe src="http://www.baidu.com" width="400" height="200"></iframe>
+		<div id="headid">
+			<a href="#table"><img src="img/1.jpg" /></a>
+			<img src="img/2.png" />
+			<img src="img/3.gif" />
+
+		</div>
+		<div>
+			<h3>testing</h3>
+			<br />
+			<p class="lvy">second p<br />third p</p>
+			<hr />
+			<p class="lvy">second+ p<br />third p</p>
+			<b> <i> <u> style </u> </i></b> <br />
+		</div>
+		<hr />
+		<div>
+			<strong> <u>testing 2 </u></strong>
+			<b> testing 3 </b><br />
+			(a+b)<sup>2</sup> <br />
+			H<sub>2</sub>O <br />
+			<s> &nbsp;&nbsp;&nbsp;&deg; "&euro; &pound;这一行是删除线 </s>
+		</div>
+		<br /><br />
+		<div>
+			<ol type="I">
+				<li>test1</li>
+				<li>test2</li>
+			</ol>
+		</div>
+		<div>
+			<ul type="square">
+				<li>test1</li>
+				<li>test2</li>
+			</ul>
+		</div>
+		<div id="table">
+			<table>
+				<caption><a href="#headid">this is title</a></caption>
+				<thead>
+					<tr>
+						<th>head1</th>
+						<th>head2</th>
+						<th>head3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">language</td>
+						<td>C++</td>
+						<td>c+++</td>
+					</tr>
+					<tr>
+						<td>a++</td>
+						<td>d++</td>
+					</tr>
+					<tr>
+						<td colspan="3">e++</td>
+					</tr>
+				</tbody>
+				<tfoot>
+				</tfoot>
+			</table>
+		</div>
+	</body>
+</html>
